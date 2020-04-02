@@ -1,19 +1,21 @@
-var audio = new Audio('../../../Downloads/Moreland Ave Blues.mp3');
-// audio.play();
+
 
 let defaultMetronomeOptions = {
     bpm: 120,
     beats: 4,
     rhythm: "noteType",
     soundType: "tap",
-
 }
 
 
-const startButton = document.getElementById("#startButton")
-startButton.addEventListener("click", makeSound(1000))
+
+const startButton = document.getElementById("startButton")
 
 
-function makeSound(time) {
-    setInterval(audio.play, time)
-}
+startButton.addEventListener("click", function (event) {
+    let time = parseInt(document.getElementById("time").value)
+    event.preventDefault()
+    setInterval(function () { console.log(`sound every ${time}`) }, time)
+
+})
+

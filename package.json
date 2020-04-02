@@ -1,0 +1,23 @@
+{
+  "name": "metronome",
+  "version": "1.0.0",
+  "description": "",
+  "main": "metronome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeJonesW/MetronomeApp.git"
+  },
+  "author": "CodeJonesW",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeJonesW/MetronomeApp/issues"
+  },
+  "homepage": "https://github.com/CodeJonesW/MetronomeApp#readme",
+  "dependencies": {
+    "howler": "^2.1.3",
+    "play-sound": "^1.1.3"
+  }
+}
