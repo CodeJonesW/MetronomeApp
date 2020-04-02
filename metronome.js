@@ -16,13 +16,11 @@ startButton.addEventListener("click", function (event) {
     let time = parseInt(document.getElementById("time").value)
     event.preventDefault()
     setInterval(function () { console.log(`sound every ${time}`) }, time)
-    // startButton.disabled = true
-    // stopButton.disabled = false
+    startButton.disabled = true
 
     stopButton.addEventListener("click", function (event) {
         clearInterval()
-        // startButton.disabled = false
-        // stopButton.disabled = true
+        startButton.disabled = false
 
     })
 })
