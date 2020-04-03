@@ -39,9 +39,6 @@ startButton.addEventListener("click", function (event) {
             let icon = document.createElement("p")
             icon.innerHTML = '$'
             beatIconDiv.append(icon)
-
-
-
         } else {
             beatIconDiv.innerHTML = ""
             iconCount = 0
