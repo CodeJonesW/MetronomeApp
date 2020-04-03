@@ -14,22 +14,36 @@ function convertBpmToMilliSeconds(bpm) {
 }
 
 
-
+// Variables
 const startButton = document.getElementById("startButton")
 const stopButton = document.getElementById("stopButton")
+const beatIconDiv = document.getElementById("beatIcons")
+let bpmInput
+let iconCount = 0
+
+
 
 
 // Metronome Event Listeners
 startButton.addEventListener("click", function (event) {
     event.preventDefault()
-
     metronomeOptions.bpm = parseInt(document.getElementById("bpmInput").value)
     metronomeOptions.beatCount = parseInt(document.getElementById("beatCountInput").value)
     convertBpmToMilliSeconds(metronomeOptions.bpm)
 
 
     setInterval(function () {
+        iconCount++
         console.log(`sound every ${metronomeOptions.beatLengthInMs}ms`)
+        if (iconCount <= metronomeOptions.beatCount) {
+            let icon = document.createElement("p")
+            icon.innerHTML = '$'
+            beatIconDiv.append(icon)
+        } else {
+            beatIconDiv.innerHTML = ""
+            iconCount = 0
+        }
+
 
     }, metronomeOptions.beatLengthInMs)
 
@@ -38,6 +52,7 @@ startButton.addEventListener("click", function (event) {
 })
 
 stopButton.addEventListener("click", function (event) {
+
     clearInterval()
     startButton.disabled = false
 

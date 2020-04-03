@@ -5,19 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css"">
+    <link rel=" stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
-    <form>
-        <label>BPM:</label>
-        <input id="bpmInput" type="number" value="100" min="40" max="200"></br>
-        <label>Beat Count:</label>
-        <input id="beatCountInput" type="number" value="4" min="1" max="10"></br>
-        <button id="startButton">Start</button>
-        <button id="stopButton">Stop</button>
-    </form>
+    <div class="container">
+        <div class="row ">
+            <div class="col-lg ">
+                <div id="cardId" class="card">
+                    <form>
+                        <label>BPM:</label>
+                        <input id="bpmInput" type="number" value="100" min="40" max="250"></br>
+                        <label>Beat Count:</label>
+                        <input id="beatCountInput" type="number" value="4" min="1" max="10"></br>
+                        <button id="startButton">Start</button>
+                        <button id="stopButton">Stop</button>
+                    </form>
 
+                    <div id="beatIcons">
 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="metronome.js"></script>
 </body>
