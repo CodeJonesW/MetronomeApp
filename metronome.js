@@ -3,7 +3,7 @@
 let metronomeOptions = {
     bpm: 100,
     beatLengthInMs: 600,
-    beats: 4,
+    beatCount: 4,
     rhythm: "noteType",
     soundType: "tap",
 }
@@ -23,11 +23,17 @@ const stopButton = document.getElementById("stopButton")
 startButton.addEventListener("click", function (event) {
     event.preventDefault()
 
-    metronomeOptions.bpm = parseInt(document.getElementById("time").value)
+    metronomeOptions.bpm = parseInt(document.getElementById("bpmInput").value)
+    metronomeOptions.beatCount = parseInt(document.getElementById("beatCountInput").value)
     convertBpmToMilliSeconds(metronomeOptions.bpm)
 
 
-    setInterval(function () { console.log(`sound every ${metronomeOptions.beatLengthInMs}ms`) }, metronomeOptions.beatLengthInMs)
+    setInterval(function () {
+        console.log(`sound every ${metronomeOptions.beatLengthInMs}ms`)
+
+    }, metronomeOptions.beatLengthInMs)
+
+
     startButton.disabled = true
 })
 
