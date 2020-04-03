@@ -17,7 +17,7 @@ function convertBpmToMilliSeconds(bpm) {
 // Variables
 const startButton = document.getElementById("startButton")
 const stopButton = document.getElementById("stopButton")
-const beatIconDiv = document.getElementById("beatIcons")
+const beatIconDiv = document.getElementById("beatIconDiv")
 let bpmInput
 let iconCount = 0
 
@@ -39,6 +39,9 @@ startButton.addEventListener("click", function (event) {
             let icon = document.createElement("p")
             icon.innerHTML = '$'
             beatIconDiv.append(icon)
+
+
+
         } else {
             beatIconDiv.innerHTML = ""
             iconCount = 0
