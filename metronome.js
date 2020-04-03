@@ -18,6 +18,7 @@ function convertBpmToMilliSeconds(bpm) {
 const startButton = document.getElementById("startButton")
 const stopButton = document.getElementById("stopButton")
 const beatIconDiv = document.getElementById("beatIconDiv")
+const iconElement = document.getElementById("beatIconElement")
 let bpmInput
 let iconCount = 0
 
@@ -42,11 +43,15 @@ startButton.addEventListener("click", function (event) {
 
         // conditional icon rendering based on the beatCount option
         if (iconCount <= metronomeOptions.beatCount) {
-            let icon = document.createElement("p")
-            icon.innerHTML = '$'
-            beatIconDiv.append(icon)
+            // let icon = document.createElement("p")
+            // icon.innerHTML = '$'
+            // beatIconDiv.append(icon)
+
+            let image = "$"
+            iconElement.innerHTML = image.repeat(iconCount)
         } else {
-            beatIconDiv.innerHTML = ""
+            // beatIconDiv.innerHTML = ""
+            iconElement.innerHTML = ""
             iconCount = 0
         }
 
