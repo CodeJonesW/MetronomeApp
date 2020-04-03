@@ -20,7 +20,7 @@ const stopButton = document.getElementById("stopButton")
 const beatIconDiv = document.getElementById("beatIconDiv")
 const iconElement = document.getElementById("beatIconElement")
 let bpmInput
-let iconCount = 0
+let iconCount = 1
 
 
 
@@ -38,24 +38,18 @@ startButton.addEventListener("click", function (event) {
 
     // interval determined by the metronomeOptions we set
     setInterval(function () {
-        iconCount++
         console.log(`Sound occurs every: ${metronomeOptions.beatLengthInMs}ms`)
 
         // conditional icon rendering based on the beatCount option
         if (iconCount <= metronomeOptions.beatCount) {
-            // let icon = document.createElement("p")
-            // icon.innerHTML = '$'
-            // beatIconDiv.append(icon)
-
             let image = "$"
             iconElement.innerHTML = image.repeat(iconCount)
         } else {
-            // beatIconDiv.innerHTML = ""
-            iconElement.innerHTML = ""
-            iconCount = 0
+            iconElement.innerHTML = "$"
+            iconCount = 1
         }
 
-
+        iconCount++
     }, metronomeOptions.beatLengthInMs)
 
     // disable start button while metronome is running
