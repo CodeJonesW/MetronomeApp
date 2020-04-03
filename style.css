@@ -6,4 +6,20 @@
 #containerId{
     margin-top: 20vh;
 }
-body {background-color: rgb(0, 157, 255) !important;}
+body {
+    background-color: rgb(0, 157, 255) !important;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(0, 157, 255);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+
+  #beatIconDiv {
+      margin-top: 5vh;
+      margin-left: 20vw;
+  }

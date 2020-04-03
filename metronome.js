@@ -42,10 +42,10 @@ startButton.addEventListener("click", function (event) {
 
         // conditional icon rendering based on the beatCount option
         if (iconCount <= metronomeOptions.beatCount) {
-            let image = "$"
+            let image = ` <span class="dot"></span>`
             iconElement.innerHTML = image.repeat(iconCount)
         } else {
-            iconElement.innerHTML = "$"
+            iconElement.innerHTML = `<span class="dot"></span>`
             iconCount = 1
         }
 
