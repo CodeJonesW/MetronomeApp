@@ -24,3 +24,7 @@ body {
     display: inline-block;
     margin: .5vw;
 }
+
+#sound{
+    display:none
+}

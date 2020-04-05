@@ -15,6 +15,7 @@ function convertBpmToMilliSeconds(bpm) {
 
 
 // Variables
+const sound = document.getElementById("sound")
 const startButton = document.getElementById("startButton")
 const stopButton = document.getElementById("stopButton")
 const beatIconDiv = document.getElementById("beatIconDiv")
@@ -39,7 +40,7 @@ startButton.addEventListener("click", function (event) {
     // interval determined by the metronomeOptions we set
     setInterval(function () {
         console.log(`Sound occurs every: ${metronomeOptions.beatLengthInMs}ms`)
-
+        sound.play()
         // conditional icon rendering based on the beatCount option
         if (iconCount <= metronomeOptions.beatCount) {
             let image = ` <span class="dot"></span>`
@@ -61,6 +62,11 @@ stopButton.addEventListener("click", function (event) {
     clearInterval()
     startButton.disabled = false
 })
+
+
+// audio 
+
+
 
 
 
