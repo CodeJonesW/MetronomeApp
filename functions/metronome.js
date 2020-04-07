@@ -1,11 +1,15 @@
 // beatLengthInMs stands for beatLength in Milliseconds
 
+
+// Current notes to self
+// clap audio sample is to long. go get a click
+
 let metronomeOptions = {
     bpm: 100,
     beatLengthInMs: 600,
     beatCount: 4,
     rhythm: "noteType",
-    soundType: "tap",
+    soundType: "clap",
 }
 
 function convertBpmToMilliSeconds(bpm) {
@@ -14,19 +18,23 @@ function convertBpmToMilliSeconds(bpm) {
 }
 
 
-// Variables
-const sound = document.getElementById("sound")
+// Html Element Variables
 const startButton = document.getElementById("startButton")
 const stopButton = document.getElementById("stopButton")
 const beatIconDiv = document.getElementById("beatIconDiv")
 const iconElement = document.getElementById("beatIconElement")
-let bpmInput
+
+// Programming Variables
 let iconCount = 1
+
+// Sound Variables
+const sound = document.getElementById("sound")
 
 
 
 
 // Metronome Event Listeners
+// START BUTTON
 startButton.addEventListener("click", function (event) {
     event.preventDefault()
 
@@ -57,6 +65,9 @@ startButton.addEventListener("click", function (event) {
     startButton.disabled = true
 })
 
+
+
+// STOP BUTTON
 stopButton.addEventListener("click", function (event) {
     // stop interval an enable the start button again
     clearInterval()
@@ -64,7 +75,6 @@ stopButton.addEventListener("click", function (event) {
 })
 
 
-// audio 
 
 
 
