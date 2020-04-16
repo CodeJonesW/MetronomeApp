@@ -1,5 +1,5 @@
 // beatLengthInMs stands for beatLength in Milliseconds
-
+// deploy to github pages?
 
 // Current notes to self
 // clap audio sample is to long. go get a click
