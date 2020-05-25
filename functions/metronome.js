@@ -5,7 +5,7 @@
 // clap audio sample is to long. go get a click
 
 let metronomeOptions = {
-    bpm: 100,
+    bpm: 60,
     beatLengthInMs: 600,
     beatCount: 4,
     rhythm: "noteType",
